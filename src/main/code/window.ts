@@ -2,8 +2,7 @@ import { is } from '@electron-toolkit/utils'
 import { BrowserWindow, screen, shell } from 'electron'
 import { join } from 'path'
 import icon from '../../../resources/icon.png?asset'
-import * as ipc from './ipc'
-export function createWindow(): void {
+export function createWindow(): BrowserWindow {
   // Create the browser window.
   const { width } = screen.getPrimaryDisplay().workAreaSize
   const mainWindow = new BrowserWindow({
@@ -23,7 +22,6 @@ export function createWindow(): void {
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
   })
-  ipc.registerIpc(mainWindow)
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
@@ -37,4 +35,6 @@ export function createWindow(): void {
   } else {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'))
   }
+
+  return mainWindow
 }
