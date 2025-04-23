@@ -1,11 +1,19 @@
 {
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // 默认格式化工具选择prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 保存的时候自动格式化
+  "editor.formatOnSave": true,
+  // 自动能修复
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never",
+    "source.fixAll.stylelint": "explicit"
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  // 配置stylelint检查的文件类型范围
+  // 与package.json的scripts对应
+  "stylelint.validate": ["css", "scss", "vue", "html", "tsx"],
+  "stylelint.enable": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
 }
