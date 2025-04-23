@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist, subscribeWithSelector } from 'zustand/middleware';
 import { immer } from 'zustand/middleware/immer';
 const initialState = {
-  fish: 0,
+  fish: 2,
   // 可以随机拓展字段
 };
 

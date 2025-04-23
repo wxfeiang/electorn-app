@@ -71,15 +71,13 @@
     ]
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
+    "*.{js,jsx,ts,tsx,json, vue}": [
+      "eslint --fix"
     ],
-    "*.{css,scss}": [
-      "stylelint --fix",
-      "prettier --write"
+    "*.{scss,less,styl,html}": [
+      "stylelint --fix --allow-empty-input"
     ],
-    "*.{json,md}": [
+    "*.md": [
       "prettier --write"
     ]
   }
