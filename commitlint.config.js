@@ -27,4 +27,4 @@ module.exports = {
     'body-leading-blank': [1, 'always'], // body 前需空行
     'footer-leading-blank': [1, 'always'], // footer 前需空行
   },
-};
+}

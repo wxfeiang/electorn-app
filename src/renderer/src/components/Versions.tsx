@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 function Versions(): JSX.Element {
-  const [versions] = useState(window.electron.process.versions);
+  const [versions] = useState(window.electron.process.versions)
   return (
     <div className="fixed bottom-2 left-0 right-0 w-full">
       <ul className=" flex gap-4 justify-center">
@@ -16,7 +16,7 @@ function Versions(): JSX.Element {
         </li>
       </ul>
     </div>
-  );
+  )
 }
 
-export default Versions;
+export default Versions

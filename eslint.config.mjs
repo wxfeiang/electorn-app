@@ -12,22 +12,25 @@ export default tseslint.config(
   {
     settings: {
       react: {
-        version: 'detect'
-      }
-    }
+        version: 'detect',
+      },
+    },
   },
   {
     files: ['**/*.{ts,tsx}'],
     plugins: {
       'react-hooks': eslintPluginReactHooks,
-      'react-refresh': eslintPluginReactRefresh
+      'react-refresh': eslintPluginReactRefresh,
     },
     rules: {
       ...eslintPluginReactHooks.configs.recommended.rules,
       ...eslintPluginReactRefresh.configs.vite.rules,
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-      'no-unused-vars': 'off'
-    }
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      'no-unused-vars': 'off',
+    },
   },
-  eslintConfigPrettier
+  eslintConfigPrettier,
 )

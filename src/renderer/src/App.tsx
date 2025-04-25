@@ -1,13 +1,13 @@
-import Versions from './components/Versions';
-import Home from './Home';
+import Versions from './components/Versions'
+import Home from './Home'
 
 function App(): JSX.Element {
   // const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
   const ipcHide = (): void => {
-    console.log('🍅');
-    alert('确定要关闭嘛？ ');
-    window.api.hideWindow();
-  };
+    console.log('🍅')
+    alert('确定要关闭嘛？ ')
+    window.api.hideWindow()
+  }
   return (
     <>
       <Home></Home>
@@ -17,7 +17,7 @@ function App(): JSX.Element {
       </div>
       <Versions></Versions>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
