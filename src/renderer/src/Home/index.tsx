@@ -1,11 +1,17 @@
 import React from 'react'
-import { useConfigStore } from '../store'
+import { useConfigStore, addOneFish } from '../store'
 const Home: React.FC = () => {
-  const fish = useConfigStore.getState().fish
-  console.log('🍨[ fish, addOneFish, removeOnefilsh, removeAllFish ]:', fish)
+  const { fish } = useConfigStore()
+  console.log('🍨[ fish,]:', fish)
+  const a = (e): void => {
+    console.log('🍺', e)
+    addOneFish()
+  }
   return (
     <>
-      <div className="size-22 h-20"></div>
+      <div className="size-22 h-20 p-2 bg-amber-300" onClick={() => a(1)}>
+        {fish}
+      </div>
     </>
   )
 }
