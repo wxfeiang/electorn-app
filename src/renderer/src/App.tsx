@@ -11,9 +11,8 @@ function App(): JSX.Element {
   return (
     <>
       <Home></Home>
-      <div className="bg-amber-200 p-10px " onClick={ipcHide}>
-        {' '}
-        测试点击关闭窗口pnpm{' '}
+      <div className="p-10px  text-amber-900" onClick={ipcHide}>
+        测试点击关闭窗口pnpm
       </div>
       <Versions></Versions>
     </>

@@ -1,10 +1,11 @@
 import React from 'react'
-import { useFoodsStore } from '../store'
+import { useConfigStore } from '../store'
 const Home: React.FC = () => {
-  const fish = useFoodsStore().fish
+  const fish = useConfigStore.getState().fish
+  console.log('🍨[ fish, addOneFish, removeOnefilsh, removeAllFish ]:', fish)
   return (
     <>
-      <div className="size-22 h-20">{fish}</div>
+      <div className="size-22 h-20"></div>
     </>
   )
 }

@@ -1,17 +1,18 @@
 import { create } from 'zustand'
 import { persist, subscribeWithSelector } from 'zustand/middleware'
-import { immer } from 'zustand/middleware/immer'
+import { immer } from 'zustand/middleware/immer' // 导入 Immer 中间件
+
 const initialState = {
   fish: 2,
   // 可以随机拓展字段
 }
 
 const addOneFish = (): void =>
-  useFoodsStore.setState((state) => ({ fish: state.fish + 1 }))
+  useConfigStore.setState((state) => ({ fish: state.fish + 1 }))
 const removeOnefilsh = (): void =>
-  useFoodsStore.setState((state) => ({ fish: state.fish - 1 }))
-const removeAllFish = (): void => useFoodsStore.setState(() => ({ fish: 0 }))
-const useFoodsStore = create<typeof initialState>()(
+  useConfigStore.setState((state) => ({ fish: state.fish - 1 }))
+const removeAllFish = (): void => useConfigStore.setState(() => ({ fish: 0 }))
+const useConfigStore = create<typeof initialState>()(
   immer(
     subscribeWithSelector(
       persist(
@@ -26,4 +27,4 @@ const useFoodsStore = create<typeof initialState>()(
   ),
 )
 
-export { addOneFish, removeAllFish, removeOnefilsh, useFoodsStore }
+export { addOneFish, removeAllFish, removeOnefilsh, useConfigStore }
