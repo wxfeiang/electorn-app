@@ -6,6 +6,9 @@ const api = {
   hideWindow: (): void => {
     ipcRenderer.send('hideWindow')
   },
+  sendRequest: (url: string): void => {
+    ipcRenderer.invoke('sendRequest', { url })
+  },
 }
 
 // Use `contextBridge` APIs to expose Electron APIs to

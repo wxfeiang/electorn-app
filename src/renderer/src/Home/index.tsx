@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   }
   return (
     <>
-      <div className="size-22 h-20 p-2 bg-amber-300" onClick={() => a(1)}>
+      <div className="size-22 h-20 p-2 bg-amber-600" onClick={() => a(1)}>
         {fish}
       </div>
     </>
